@@ -1,23 +1,39 @@
 # Simple-RAG-LangChain-Project
 
-Purpose: Build a question-answering system that retrieves relevant information from documents and generates context-aware responses using LangChain and Google Gemini.
+# 🤖 Simple RAG: Document-Based Question Answering
 
-RAG Workflow:
+### 🎯 Purpose
+Build an AI-powered question-answering system that retrieves relevant information from documents and generates context-aware responses using **LangChain** and **Google Gemini**.
 
-Document Loading: Load source documents.
+### 🔄 RAG Workflow
 
-Text Splitting: Divide documents into manageable chunks.
+1. 📄 **Document Loading:** Load source documents for processing.
+2. ✂️ **Text Splitting:** Divide documents into smaller, manageable chunks.
+3. 🔢 **Embedding Generation:** Convert text chunks into numerical vectors using `gemini-embedding-001`.
+4. 🗄️ **Vector Storage:** Store and index embeddings in the **Chroma Vector Database**.
+5. 🔍 **Retrieval:** Find relevant document chunks using semantic search.
+6. 📝 **Prompt Augmentation:** Combine retrieved context with the user's question.
+7. 💡 **Answer Generation:** Use `gemini-3.8-flash` to generate context-aware responses grounded in retrieved information.
 
-Embedding Generation: Convert text chunks into vectors using gemini-embedding-001.
+### 🛠️ Key Components
 
-Vector Storage: Store and index embeddings in Chroma.
+- 🦜 **LangChain** — RAG workflow orchestration.
+- 🧠 **Google Gemini LLM** — Context-aware answer generation.
+- 🔢 **Gemini Embeddings** — Semantic representation of text.
+- 🗄️ **Chroma Vector Database** — Vector storage and similarity search.
+- 🔎 **Retriever** — Fetches relevant document chunks.
+- 📝 **Prompt Template** — Structures context and user questions.
+- 🔐 **Google API Key** — Authenticates access to Google AI models.
 
-Retrieval: Find relevant document chunks using semantic search.
+### 📚 Learning Outcomes
 
-Prompt Augmentation: Combine retrieved context with the user's question.
+- 🔄 Understanding the RAG architecture and workflow.
+- 🔍 Implementing semantic search and document retrieval.
+- 🗄️ Working with vector databases and embeddings.
+- 📝 Applying prompt engineering techniques.
+- 🔑 Configuring API authentication securely.
+- 🛠️ Troubleshooting API key validation, model availability, dependency conflicts, and chain input mismatches.
 
-Answer Generation: Use gemini-3.8-flash to generate a context-aware response.
+### 🚀 Technologies Used
 
-Key Components: LangChain, Google Gemini LLM, Gemini Embeddings, Chroma Vector Database, Retriever, and Prompt Template.
-
-Learning Outcomes: Understand RAG architecture, semantic search, vector databases, prompt engineering, API configuration, and troubleshooting model and dependency errors.
+`Python` · `LangChain` · `Google Gemini` · `Chroma` · `Google Colab` · `Jupyter Notebook`
